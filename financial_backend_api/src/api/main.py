@@ -32,9 +32,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://vscode-internal-112-beta.beta01.cloud.kavia.ai:3000"
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=[
+        "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"
+    ],
     allow_headers=["*"],
 )
 
